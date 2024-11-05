@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIDG Savings Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <img src="Banner Airdit image.jpg" alt="Airdit Banner" class="banner">
+  </header>
+  <div class="container">
+    <h1>AIDG Saving Calculator</h1>
+    <div id="error" class="error"></div>
+
+    <!-- Input Fields -->
+    <div class="input-group">
+      <label for="records">Number of Master Data Records:</label>
+      <input type="number" id="records" placeholder="Enter number of records" required>
+    </div>
+    <div class="input-group">
+      <label for="errorRate">Current Error Rate (%) :</label>
+      <input type="number" id="errorRate" placeholder="Enter error rate (e.g., 10)" required>
+    </div>
+
+
+    <div class="input-group">
+      <label for="costPerError">Cost per Data Error (₹):</label>
+      <input type="number" id="costPerError" placeholder="Enter cost per error (e.g., 100)" required>
+
+      <div class="input-group">
+        <label for="timeSavings">Time Savings with AIDG (%) :</label>
+        <input type="number" id="timeSavings"  placeholder="40 as standard (may change as per requirement)" required>
+      </div>
+      
+     
+
+
+
+      <div class="input-group">
+        <label for="aidgCost" title="May vary as per requirement">One-Time AIDG Cost (₹):</label>
+        <input type="number" id="aidgCost" placeholder="50,000 may vary as per requirement" required>
+      </div>
+
+      <button onclick="calculateSavings()">Calculate Savings</button>
+
+      <!-- Result Display -->
+      <div class="results" id="results" style="display: none;">
+        <h2>Results:</h2>
+        <p><strong>Total Errors:</strong> <span id="totalErrors"></span></p>
+        <p><strong>Total Annual Loss (Without AIDG):</strong> ₹<span id="totalLoss"></span></p>
+        <p><strong>Estimated Annual Savings with AIDG:</strong> ₹<span id="netSavings"></span></p>
+        <p><strong>ROI of AIDG:</strong> <span id="roiPercentage"></span>%</p>
+      </div>
+    </div>
+    <div class="results ribbon-effect" id="results" style="display: none;">
+      <h2>Results:</h2>
+      <p><strong>Total Errors:</strong> <span id="totalErrors"></span></p>
+      <p><strong>Total Annual Loss (Without AIDG):</strong> ₹<span id="totalLoss"></span></p>
+      <p><strong>Estimated Annual Savings with AIDG:</strong> ₹<span id="netSavings"></span></p>
+      <p><strong>ROI of AIDG:</strong> <span id="roiPercentage"></span>%</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .banner {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column; /* Arrange label and input vertically */
+    margin-bottom: 9px; /* Space between each input group */
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px; 
+    margin-top: 5px;/* Consistent spacing between label and input */
+  }
+  
+  input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  /* Keyframes for the pop animation */
+/* Keyframes for the crackers animation */
+/* Keyframes for crackers moving towards the center */
+/* Keyframes for crackers moving towards the center with a shattering effect */
+@keyframes crackerBurst {
+    0% {
+      opacity: 1;
+      transform: scale(0.5) translateX(0) translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.5) translateX(var(--x)) translateY(var(--y));
+    }
+  }
+  
+  /* Styling for cracker sparks */
+  .cracker {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: crackerBurst 2s ease-out forwards;
+    pointer-events: none; /* Ignore clicks on cracker elements */
+    opacity: 0;
+  }
+  
+  
+  
+  
+  
+  .ribbon-effect {
+    animation: ribbonBoom 0.8s ease-out forwards;
+    transform-origin: center;
+    display: inline-block;
+  }
+  
+  .results {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e9f7ef;
+    border: 1px solid #28a745;
+    border-radius: 8px;
+    color: #000;
+  }
+  
+  .results h2 {
+    color: #0f1223;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
+  
